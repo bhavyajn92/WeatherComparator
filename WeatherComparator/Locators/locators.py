@@ -1,0 +1,5 @@
+search_box = "id@@LocationSearch_input"
+search_results = "id@@LocationSearch_listbox"
+select_search_result = "xpath@@//div[@aria-label='Search Result List']/button[1]"
+current_weather = "xpath@@//div[@data-testid='CurrentConditionsContainer']"
+current_temperature = "xpath@@//div[@data-testid='CurrentConditionsContainer']/section/div/div[2]/div/span"
