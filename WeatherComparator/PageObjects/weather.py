@@ -36,7 +36,7 @@ class Weather(PageBase):
         """
         To get current temperature of required city
         :param city_name: Name of city for which current temperature is required
-        :return: Integer value of current temperature or -1000 as garbage value
+        :return: Numeric value of current temperature or None if not found
         """
         current_temperature = None
         try:
@@ -48,5 +48,22 @@ class Weather(PageBase):
             self.log.error(f'Current temperature value not found for city - {city_name} with exception - {e}')
         finally:
             return current_temperature
+
+    def get_humidity(self, city_name):
+        """
+        To get current humidity of required city
+        :param city_name: Name of city for which current humidity is required
+        :return: Numeric value of current humidity or None if not found
+        """
+        current_humidity = None
+        try:
+            if self.search_city(city_name):
+                current_humidity = self.get_text(locators.current_humidity)
+                current_humidity = int(current_humidity.replace('%', ''))
+                self.log.info(f'Got current humidity value as {current_humidity} for city - {city_name}')
+        except Exception as e:
+            self.log.error(f'Current humidity value not found for city - {city_name} with exception - {e}')
+        finally:
+            return current_humidity
 
 
