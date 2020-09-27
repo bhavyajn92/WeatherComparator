@@ -1,6 +1,6 @@
 from py.xml import html
 import pytest
-from PageBase.Webdriver import GetWebDriver
+from PageBase.webdriver import GetWebDriver
 
 
 @pytest.fixture(scope='class')

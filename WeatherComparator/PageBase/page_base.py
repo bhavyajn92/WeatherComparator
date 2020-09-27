@@ -1,6 +1,6 @@
 from enum import Enum
 import time
-import PageBase.CustomLogger as cl
+import PageBase.custom_logger as cl
 import logging
 from selenium.webdriver.common.by import By
 from retry import retry

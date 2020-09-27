@@ -1,4 +1,4 @@
-from PageBase.PageBase import PageBase
+from PageBase.page_base import PageBase
 from Locators import locators
 from retry import retry
 from selenium.common.exceptions import StaleElementReferenceException, ElementNotInteractableException
