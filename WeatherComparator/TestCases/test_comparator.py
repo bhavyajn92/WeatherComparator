@@ -1,5 +1,5 @@
 import pytest
-import PageBase.CustomLogger as cl
+import PageBase.custom_logger as cl
 import logging
 from PageObjects.weather import Weather
 from PageObjects.open_weather_map import WeatherAPI

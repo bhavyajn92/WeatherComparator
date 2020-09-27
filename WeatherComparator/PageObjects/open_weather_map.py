@@ -1,5 +1,5 @@
 from PageBase.network_helper import NetworkHelper
-import PageBase.CustomLogger as cl
+import PageBase.custom_logger as cl
 import logging
 
 
